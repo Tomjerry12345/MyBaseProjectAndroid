@@ -8,13 +8,14 @@ import com.mybaseprojectandroid.R
 import com.mybaseprojectandroid.databinding.ExamplesApiAddFragmentBinding
 import com.mybaseprojectandroid.repository.ExamplesApiRepository
 import com.mybaseprojectandroid.utils.other.Constant
+import com.mybaseprojectandroid.utils.other.FactoryViewModel
 import com.mybaseprojectandroid.utils.system.GetFilesFromStorage
 
 
 class ExamplesApiAddFragment : Fragment(R.layout.examples_api_add_fragment) {
 
     private val viewModel: ExamplesApiAddViewModel by viewModels {
-        ExamplesApiAddViewModel.Factory(ExamplesApiRepository())
+        FactoryViewModel(ExamplesApiAddViewModel(ExamplesApiRepository()))
     }
 
     private lateinit var binding: ExamplesApiAddFragmentBinding

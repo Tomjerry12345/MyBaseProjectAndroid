@@ -9,13 +9,14 @@ import com.mybaseprojectandroid.databinding.ExamplesApiFragmentBinding
 import com.mybaseprojectandroid.model.ExamplesApiModel
 import com.mybaseprojectandroid.repository.ExamplesApiRepository
 import com.mybaseprojectandroid.utils.network.Response
+import com.mybaseprojectandroid.utils.other.FactoryViewModel
 import com.mybaseprojectandroid.utils.other.showLogAssert
 import com.mybaseprojectandroid.utils.other.showToast
 
 class ExamplesApiFragment : Fragment(R.layout.examples_api_fragment) {
 
     private val viewModel: ExamplesApiViewModel by viewModels {
-        ExamplesApiViewModel.Factory(ExamplesApiRepository())
+        FactoryViewModel(ExamplesApiViewModel(ExamplesApiRepository()))
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

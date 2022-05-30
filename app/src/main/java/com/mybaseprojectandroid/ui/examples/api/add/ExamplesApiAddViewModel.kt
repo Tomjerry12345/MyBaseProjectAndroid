@@ -56,13 +56,4 @@ class ExamplesApiAddViewModel(
         }
     }
 
-    class Factory(
-        private val examplesApiRepository: ExamplesApiRepository
-    ) : ViewModelProvider.Factory {
-        @Suppress("UNCHECKED_CAST")
-
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return ExamplesApiAddViewModel(examplesApiRepository) as T
-        }
-    }
 }

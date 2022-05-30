@@ -104,7 +104,7 @@ class FirebaseDatabase {
                     data.forEach {
                         showLogAssert("data", "${it.toObject(ExamplesModel::class.java)}")
                         val model = it.toObject(ExamplesModel::class.java)
-                        SavedData.setObject(model)
+//                        SavedData.setObject(model)
                     }
 
                     Response.Success("Sukses")

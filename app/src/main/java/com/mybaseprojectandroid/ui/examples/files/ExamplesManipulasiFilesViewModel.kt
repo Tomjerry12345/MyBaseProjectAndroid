@@ -17,12 +17,4 @@ class ExamplesManipulasiFilesViewModel : ViewModel() {
         showToast(view.context, "Belum tersedia")
     }
 
-    class Factory : ViewModelProvider.Factory {
-        @Suppress("UNCHECKED_CAST")
-
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return ExamplesManipulasiFilesViewModel() as T
-        }
-    }
-
 }

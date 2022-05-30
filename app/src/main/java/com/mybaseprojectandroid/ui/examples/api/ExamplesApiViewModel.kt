@@ -54,12 +54,4 @@ class ExamplesApiViewModel(private val examplesApiRepository: ExamplesApiReposit
         moveNavigationTo(view, R.id.action_examplesApiFragment_to_examplesApiAddFragment)
     }
 
-    class Factory(private val examplesApiRepository: ExamplesApiRepository) : ViewModelProvider.Factory {
-        @Suppress("UNCHECKED_CAST")
-
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return ExamplesApiViewModel(examplesApiRepository) as T
-        }
-    }
-
 }
